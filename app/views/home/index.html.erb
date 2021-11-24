@@ -1,2 +1,5 @@
 <h1>Home Page</h1>
 <p>Contains basic bootstrap...</p>
+<% if user_signed_in? %>
+    <%= current_user.inspect %>
+<% end %>
