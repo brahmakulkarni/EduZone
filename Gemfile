@@ -12,6 +12,9 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'devise', '~> 4.8'
 gem 'simple_form'
+gem 'uglifier', '>= 1.3.0'
+gem 'jquery-rails'
+gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 
