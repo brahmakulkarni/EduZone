@@ -7,7 +7,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to 'Posts', posts_path, class:"btn btn-outline-secondary mx-3 nav-link" %>
+          </li>
+        <% end %>
       </ul>
 
       <ul class="navbar-nav btn-toolbar">
@@ -20,6 +24,9 @@
             <%= link_to 'Sign In', new_user_session_path, class:"btn btn-outline-secondary mx-3 nav-link" %>
           </li>
         <% else %>
+          <li class="nav-item">
+            <%= link_to 'New Post', new_post_path, class:"btn btn-outline-secondary mx-3 nav-link" %>
+          </li>
           <li class="nav-item">
             <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"btn btn-outline-secondary mx-3 nav-link" %>
           </li>
