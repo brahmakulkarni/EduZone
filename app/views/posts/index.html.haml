@@ -5,7 +5,7 @@
         .post   
         %h2= link_to post.title, post
         %p
-        Published at
+        Published 
         = time_ago_in_words(post.created_at)
-        = "by"
+        = "ago by"
         = post.user.email
